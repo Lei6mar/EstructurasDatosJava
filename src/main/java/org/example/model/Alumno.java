@@ -22,7 +22,7 @@ public class Alumno implements Comparable<Alumno>{
         this.nombre = nombre;
     }
 
-    public int getNota() {
+    public Integer getNota() {
         return nota;
     }
 
