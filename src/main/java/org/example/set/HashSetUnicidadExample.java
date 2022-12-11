@@ -2,6 +2,7 @@ package org.example.set;
 
 import org.example.model.Alumno;
 
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -18,5 +19,22 @@ public class HashSetUnicidadExample {
         sa.add(new Alumno("Zeus", 3));
 
         System.out.println("sa = " + sa);
+
+        System.out.println("Iterando usando foreach");
+        for (Alumno a :
+                sa) {
+            System.out.println("a = " + a);
+        }
+
+        System.out.println("Iterando while and iterator");
+
+        Iterator<Alumno> iterator = sa.iterator();
+        while (iterator.hasNext()){
+            Alumno a = iterator.next();
+            System.out.println(a.getNombre());
+        }
+
+        System.out.println("Iterando usando Stream forEach");
+        sa.forEach(System.out::println);
     }
 }
