@@ -5,6 +5,7 @@ import org.example.model.Alumno;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class LinkedListExample {
     public static void main(String[] args) {
@@ -45,5 +46,17 @@ public class LinkedListExample {
 
         enlazada.set(0, new Alumno("Lalo", 7));
         System.out.println(enlazada + "ar.size() = " + enlazada.size());
+
+        //List iterator
+        ListIterator<Alumno> li = enlazada.listIterator();
+
+        while (li.hasNext()){
+            System.out.println("li.next() = " + li.next());
+        }
+
+        while (li.hasPrevious()){
+            Alumno alumno = li.previous();
+            System.out.println("alumno li.previous() = " + alumno);
+        }
     }
 }
