@@ -1,4 +1,4 @@
-package org.example.set;
+package org.example.list;
 
 import org.example.model.Alumno;
 
